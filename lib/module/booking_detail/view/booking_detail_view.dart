@@ -362,7 +362,7 @@ class BookingDetailView extends StatefulWidget {
               width: MediaQuery.of(context).size.width,
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xfffdc620),
+                  backgroundColor: Colors.blue,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -371,8 +371,9 @@ class BookingDetailView extends StatefulWidget {
                 child: const Text(
                   "Download Ticket",
                   style: TextStyle(
-                    color: Color(0xff383d47),
+                    color: Colors.white,
                     fontSize: 16,
+                    fontWeight: FontWeight.bold,
                   ),
                 ),
               ),

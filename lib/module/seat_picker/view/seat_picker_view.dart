@@ -57,7 +57,7 @@ class SeatPickerView extends StatefulWidget {
                   Icon(
                     Icons.square,
                     size: 24.0,
-                    color: Color(0xfff8c321),
+                    color: Colors.blue,
                   ),
                   SizedBox(
                     width: 5.0,
@@ -138,9 +138,9 @@ class SeatPickerView extends StatefulWidget {
                               height: 30,
                               child: ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: const Color(0xfffdc620),
+                                  backgroundColor: Colors.blue,
                                   shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(12),
+                                    borderRadius: BorderRadius.circular(5),
                                   ),
                                 ),
                                 onPressed: () =>
@@ -148,8 +148,8 @@ class SeatPickerView extends StatefulWidget {
                                 child: const Text(
                                   "Executive",
                                   style: TextStyle(
-                                    color: Color(0xff383d47),
-                                    fontSize: 12,
+                                    color: Colors.white,
+                                    fontSize: 15,
                                   ),
                                 ),
                               ),
@@ -182,7 +182,7 @@ class SeatPickerView extends StatefulWidget {
                                       if (selectedSeatByOther) {
                                         color = const Color(0xffe4e4e4);
                                       } else if (selected) {
-                                        color = const Color(0xfffdc620);
+                                        color = Colors.blue;
                                       }
 
                                       return InkWell(
@@ -212,8 +212,8 @@ class SeatPickerView extends StatefulWidget {
                                                   color: selectedSeatByOther
                                                       ? Colors.grey[500]
                                                       : selected
-                                                          ? const Color(
-                                                              0xff393e48)
+                                                          ? Colors.white
+                                                              
                                                           : Colors.white,
                                                   fontSize: 16),
                                             ),
@@ -295,7 +295,7 @@ class SeatPickerView extends StatefulWidget {
             decoration: const BoxDecoration(
               border: Border(
                 top: BorderSide(
-                  color: Color(0xfff8c321),
+                  color: Colors.blue,
                   width: 4.0,
                 ),
               ),
@@ -309,7 +309,7 @@ class SeatPickerView extends StatefulWidget {
                       "Selected Seat",
                       style: TextStyle(
                         fontSize: 14.0,
-                        color: Color(0xffd9d9d9),
+                        color: Colors.white,
                       ),
                     ),
                     Text(
@@ -351,7 +351,7 @@ class SeatPickerView extends StatefulWidget {
                   width: MediaQuery.of(context).size.width,
                   child: ElevatedButton(
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xfffdc620),
+                      backgroundColor: Colors.blue,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
                       ),
@@ -360,7 +360,7 @@ class SeatPickerView extends StatefulWidget {
                     child: const Text(
                       "Confirm Seat",
                       style: TextStyle(
-                        color: Color(0xff383d47),
+                        color: Colors.white,
                         fontSize: 16,
                       ),
                     ),

@@ -21,50 +21,59 @@ class MainNavigationView extends StatefulWidget {
             Container(),
           ],
         ),
-        bottomNavigationBar: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
-          child: Theme(
-            data: Theme.of(context).copyWith(
-              canvasColor: Colors.transparent,
+bottomNavigationBar: Padding(
+  padding: const EdgeInsets.only(bottom: 10.0),
+  child: Container(
+    decoration: BoxDecoration(
+       // Set background color to blue
+      borderRadius: BorderRadius.circular(20.0), // Set border radius
+    ),
+    padding: const EdgeInsets.symmetric(horizontal: 20.0), // Horizontal padding
+    child: Theme(
+      data: Theme.of(context).copyWith(
+        canvasColor: Colors.transparent,
+      ),
+      child: BottomNavigationBar(
+        currentIndex: controller.selectedIndex,
+        onTap: (newIndex) => controller.updateIndex(newIndex),
+        showSelectedLabels: false,
+        elevation: 0.0,
+        selectedItemColor: Colors.blue, // Set selected icon color to white
+        unselectedItemColor: Colors.white, // Set unselected icon color to white
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home,
+              size: 36.0,
             ),
-            child: BottomNavigationBar(
-              currentIndex: controller.selectedIndex,
-              onTap: (newIndex) => controller.updateIndex(newIndex),
-              showSelectedLabels: false,
-              elevation: 0.0,
-              items: const [
-                BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.home,
-                    size: 36.0,
-                  ),
-                  label: "Dashboard",
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.shopping_bag,
-                    size: 36.0,
-                  ),
-                  label: "Order",
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.airplane_ticket,
-                    size: 36.0,
-                  ),
-                  label: "Favorite",
-                ),
-                BottomNavigationBarItem(
-                  icon: Icon(
-                    Icons.settings,
-                    size: 36.0,
-                  ),
-                  label: "User",
-                ),
-              ],
-            ),
+            label: "Dashboard",
           ),
-        ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.shopping_bag,
+              size: 36.0,
+            ),
+            label: "Order",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.airplane_ticket,
+              size: 36.0,
+            ),
+            label: "Favorite",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.settings,
+              size: 36.0,
+            ),
+            label: "User",
+          ),
+        ],
+      ),
+    ),
+  ),
+),
       ),
     );
   }
